@@ -27,6 +27,7 @@ object Main {
   def init(system: ActorSystem[_]): Unit = {
     AkkaManagement(system).start()
     ClusterBootstrap(system).start()
+    ShoppingCartEventConsumer.init(system)
   }
 
 }
